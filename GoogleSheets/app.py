@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from GoogleSheets.services import spreadsheet
+from services import spreadsheet
 app = FastAPI()
 
 

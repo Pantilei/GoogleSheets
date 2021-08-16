@@ -2,7 +2,7 @@ import os
 import gspread
 from gspread.models import Cell
 from oauth2client.service_account import ServiceAccountCredentials
-from GoogleSheets.tools import config_parser
+from tools import config_parser
 
 
 # use creds to create a client to interact with the Google Drive API
@@ -12,7 +12,7 @@ module_name = config_parser.get("config", "module_name")
 client_secret_json = config_parser.get("config", "client_secret_json")
 path_to_secret_json = os.path.join(module_name, client_secret_json)
 creds = ServiceAccountCredentials.from_json_keyfile_name(
-    path_to_secret_json, scope)
+    client_secret_json, scope)
 client = gspread.authorize(creds)
 
 # Create sheet object

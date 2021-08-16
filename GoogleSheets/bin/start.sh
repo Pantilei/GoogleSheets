@@ -2,4 +2,6 @@
 ROOT=$(dirname $0)/../..
 PYTHON=$ROOT/GoogleSheets/env/bin/python3 
 MODULE=$ROOT 
-$PYTHON $MODULE -m GoogleSheets.main
+# $PYTHON $MODULE -m GoogleSheets.main
+$PYTHON -m GoogleSheets.main
+
