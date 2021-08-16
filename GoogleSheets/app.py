@@ -19,7 +19,7 @@ async def set_value(row_number: int):
     return ":".join(sheet_3_first_row_values)
 
 
-@app.delete("/delete-value/{row_number}")
+@app.put("/delete-value/{row_number}")
 async def delete_row(row_number: int):
     sheet_2_first_row_values = spreadsheet.sheet_2.row_values(row_number+1)
     spreadsheet.sheet_2.delete_row(row_number+1)
