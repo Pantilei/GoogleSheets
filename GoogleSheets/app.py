@@ -18,7 +18,8 @@ async def set_value(row_number: int):
     spreadsheet.sheet_2.delete_row(row_number+1)
     # Update status cell
     spreadsheet.update_status_cell()
-    return {
-        "sheet_3_first_row": sheet_3_first_row_values,
-        "sheet_2_first_row": sheet_2_first_row_values
-    }
+    return ":".join(sheet_3_first_row_values)
+    # return {
+    #     "sheet_3_first_row": sheet_3_first_row_values,
+    #     "sheet_2_first_row": sheet_2_first_row_values
+    # }
